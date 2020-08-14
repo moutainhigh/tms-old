@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="instorageFlow" name="入库单审批" isExecutable="true">
+    <startEvent id="startevent1" name="Start"></startEvent>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <userTask id="finance_approve" name="财务部经理审批" activiti:candidateGroups="b2a40b898d9c4d56a8a5667c8ee0836d"></userTask>
+    <userTask id="manager_approve" name="总经理审批" activiti:candidateGroups="c4b86b63b4fa40ed83845c96c14fb018"></userTask>
+    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="finance_approve"></sequenceFlow>
+    <sequenceFlow id="flow2" sourceRef="finance_approve" targetRef="manager_approve"></sequenceFlow>
+    <sequenceFlow id="flow3" sourceRef="manager_approve" targetRef="endevent1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_instorageFlow">
+    <bpmndi:BPMNPlane bpmnElement="instorageFlow" id="BPMNPlane_instorageFlow">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="170.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="680.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="finance_approve" id="BPMNShape_finance_approve">
+        <omgdc:Bounds height="55.0" width="105.0" x="280.0" y="140.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="manager_approve" id="BPMNShape_manager_approve">
+        <omgdc:Bounds height="55.0" width="105.0" x="470.0" y="154.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="205.0" y="137.0"></omgdi:waypoint>
+        <omgdi:waypoint x="280.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="385.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="470.0" y="181.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="575.0" y="181.0"></omgdi:waypoint>
+        <omgdi:waypoint x="697.0" y="155.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

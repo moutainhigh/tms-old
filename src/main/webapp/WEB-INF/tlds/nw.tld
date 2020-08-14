@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>2.2.3</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>nw</short-name>
+
+	<tag>
+		<name>Bill</name>
+		<tag-class>org.nw.jf.tag.BillTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>templetVO</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>a List include all the required fields </description>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>what is the type of the generating Object,maybe Ext or
+				Jquery, default Ext</description>
+		</attribute>
+		<attribute>
+			<name>isBuildHeaderCard</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is build headerCard component,default to true</description>
+		</attribute>
+		<attribute>
+			<name>isBuildHeaderGrid</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is build HeaderGrid component,default to true</description>
+		</attribute>
+		<attribute>
+			<name>labelWidth</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>formPanel labelWidth</description>
+		</attribute>
+		<attribute>
+			<name>tableColumns</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>tableLayout columns</description>
+		</attribute>
+		<attribute>
+			<name>headerGridPagination</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is add page toolbar for all headerGrid</description>
+		</attribute>
+		<attribute>
+			<name>headerGridBufferView</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>headerGrid use BufferView</description>
+		</attribute>		
+		<attribute>
+			<name>headerGridDataUrl</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>headerGridImmediatelyLoad</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>headerGridCheckboxSelectionModel</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is add checkboxSelectionModel for headerGrid</description>
+		</attribute>
+		<attribute>
+			<name>headerGridSingleSelect</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is headerGrid single select</description>
+		</attribute>
+		<attribute>
+			<name>headerGridPageSizePlugin</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>headerGrid is add pageSize plugin</description>
+		</attribute>
+		<attribute>
+			<name>headerGridPageSize</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>headerGridPlugins</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>headerGrid plugins</description>
+		</attribute>
+		<attribute>
+			<name>headerGridSortable</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>set to false to disable column sortable</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsImmediatelyLoad</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>bodyGridsCheckboxSelectionModel</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is add checkboxSelectionModel for bodyGrid</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsSingleSelect</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>are bodyGrids single select</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsPagination</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is add page toolbar for all bodyGrid</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsBufferView</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is use BufferView for all bodyGrid</description>
+		</attribute>		
+		<attribute>
+			<name>bodyGridsDataUrl</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>split with , if has more than one body grid</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>split with , if has more than one body grid</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsPlugins</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>bodyGrids plugins</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsSortable</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>set to false to disable column sortable</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsNewRowWhenWalkInLastCell</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>add new row if walk in last cell of this EditorGrid</description>
+		</attribute>
+		<attribute>
+			<name>bodyGridsDragDropRowOrder</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is bodygrid can drag and drop to reOrder row</description>
+		</attribute>
+		<attribute>
+			<name>useFieldSetInHeader</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>if use fieldset when there are more than one tab</description>
+		</attribute>
+		<attribute>
+			<name>isShowTab</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>if use tab in header</description>
+		</attribute>		
+	</tag>
+	<tag>
+		<name>Report</name>
+		<tag-class>org.nw.jf.tag.ReportTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>templetVO</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>a List include all the required fields </description>
+		</attribute>
+		<attribute>
+			<name>headerGridPagination</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is add page toolbar for all headerGrid</description>
+		</attribute>
+		<attribute>
+			<name>headerGridDataUrl</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>headerGridSingleSelect</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is headerGrid single select</description>
+		</attribute>
+		<attribute>
+			<name>headerGridCheckboxSelectionModel</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is headerGrid use checkbox</description>
+		</attribute>
+		<attribute>
+			<name>headerGridPageSizePlugin</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>headerGrid is add pageSize plugin</description>
+		</attribute>
+		<attribute>
+			<name>headerGridPageSize</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>headerGridPlugins</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>headerGrid plugins</description>
+		</attribute>
+		<attribute>
+			<name>headerGridSortable</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>set to false to disable column sortable</description>
+		</attribute>
+		<attribute>
+			<name>headerGridImmediatelyLoad</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>to load header grid data when page load</description>
+		</attribute>
+	</tag>	
+	<tag>
+		<name>table</name>
+		<tag-class>org.nw.jf.tag.TableTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>paginationVO</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>paging object include all datas </description>
+		</attribute>		
+		<attribute>
+			<name>fieldVOs</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>a List include all the required fields </description>
+		</attribute>
+		<attribute>
+			<name>isAddNm</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is add number column</description>
+		</attribute>
+		<attribute>
+			<name>isAddCheckbox</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is add checkbox column</description>
+		</attribute>
+		<attribute>
+			<name>isAddProcessor</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is add processor column</description>
+		</attribute>
+	</tag>	
+	<tag>
+		<name>pagingToolbar</name>
+		<tag-class>org.nw.jf.tag.PagingToolbarTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>paginationVO</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>paging object include all datas </description>
+		</attribute>		
+	</tag>	
+	<tag>
+		<name>refModel</name>
+		<tag-class>org.nw.jf.tag.RefModelTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>refClazz</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description></description>
+		</attribute>
+		<attribute>
+			<name>variableName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>the javascript variable name of this refModel,just for easy to use everywhere</description>
+		</attribute>
+		<attribute>
+			<name>renderTo</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>the refModel to render</description>
+		</attribute>		
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>id of the refModel</description>
+		</attribute>
+		<attribute>
+			<name>fieldLabel</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description></description>
+		</attribute>		
+		<attribute>
+			<name>defaultValue</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>a pk vlaue or a string value like {pk:'123',code:'123',name:''}</description>
+		</attribute>
+		<attribute>
+			<name>isMulti</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>is multi select</description>
+		</attribute>
+		<attribute>
+			<name>returnType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>0,return code;1,return text;2,return pk</description>
+		</attribute>
+		<attribute>
+			<name>colspan</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>colspan when in the tableLayout</description>
+		</attribute>
+	</tag>			
+</taglib>

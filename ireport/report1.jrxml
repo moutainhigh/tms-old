@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5573bd26-59ea-4bd3-9d26-7652a957eccf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="57"/>
+	<parameter name="pk_invoice" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from ts_invoice]]>
+	</queryString>
+	<field name="pk_invoice" class="java.lang.String"/>
+	<field name="dr" class="java.lang.Integer"/>
+	<field name="ts" class="java.lang.String"/>
+	<field name="vbillno" class="java.lang.String"/>
+	<field name="cust_orderno" class="java.lang.String"/>
+	<field name="orderno" class="java.lang.String"/>
+	<field name="vbillstatus" class="java.lang.Integer"/>
+	<field name="pk_customer" class="java.lang.String"/>
+	<field name="bala_customer" class="java.lang.String"/>
+	<field name="pk_trans_type" class="java.lang.String"/>
+	<field name="urgent_level" class="java.lang.Integer"/>
+	<field name="feature" class="java.lang.String"/>
+	<field name="req_deli_date" class="java.lang.String"/>
+	<field name="req_deli_time" class="java.lang.String"/>
+	<field name="req_arri_date" class="java.lang.String"/>
+	<field name="req_arri_time" class="java.lang.String"/>
+	<field name="order_time" class="java.lang.String"/>
+	<field name="pk_psndoc" class="java.lang.String"/>
+	<field name="pk_dept" class="java.lang.String"/>
+	<field name="contact" class="java.lang.String"/>
+	<field name="mileage" class="java.lang.Integer"/>
+	<field name="pk_invoice_type" class="java.lang.String"/>
+	<field name="pk_service_type" class="java.lang.String"/>
+	<field name="trade_term" class="java.lang.String"/>
+	<field name="invoice_origin" class="java.lang.Integer"/>
+	<field name="create_user" class="java.lang.String"/>
+	<field name="create_time" class="java.lang.String"/>
+	<field name="pk_corp" class="java.lang.String"/>
+	<field name="memo" class="java.lang.String"/>
+	<field name="pk_delivery" class="java.lang.String"/>
+	<field name="deli_city" class="java.lang.String"/>
+	<field name="deli_province" class="java.lang.String"/>
+	<field name="deli_area" class="java.lang.String"/>
+	<field name="deli_detail_addr" class="java.lang.String"/>
+	<field name="deli_contact" class="java.lang.String"/>
+	<field name="deli_mobile" class="java.lang.String"/>
+	<field name="deli_phone" class="java.lang.String"/>
+	<field name="deli_email" class="java.lang.String"/>
+	<field name="pk_arrival" class="java.lang.String"/>
+	<field name="arri_city" class="java.lang.String"/>
+	<field name="arri_province" class="java.lang.String"/>
+	<field name="arri_area" class="java.lang.String"/>
+	<field name="arri_detail_addr" class="java.lang.String"/>
+	<field name="arri_contact" class="java.lang.String"/>
+	<field name="arri_mobile" class="java.lang.String"/>
+	<field name="arri_phone" class="java.lang.String"/>
+	<field name="arri_email" class="java.lang.String"/>
+	<field name="distance" class="java.math.BigDecimal"/>
+	<field name="if_backbill" class="java.lang.String"/>
+	<field name="if_ins_receipt" class="java.lang.String"/>
+	<field name="receipt_amount" class="java.math.BigDecimal"/>
+	<field name="if_insurance" class="java.lang.String"/>
+	<field name="insurance_amount" class="java.math.BigDecimal"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<field name="insurance_no" class="java.lang.String"/>
+	<field name="if_billing" class="java.lang.String"/>
+	<field name="if_return" class="java.lang.String"/>
+	<field name="returnbill_no" class="java.lang.String"/>
+	<field name="if_customs_official" class="java.lang.String"/>
+	<field name="customs_official_no" class="java.lang.String"/>
+	<field name="cost_center" class="java.lang.String"/>
+	<field name="deli_process" class="java.lang.String"/>
+	<field name="arri_process" class="java.lang.String"/>
+	<field name="note" class="java.lang.String"/>
+	<field name="num_count" class="java.lang.Integer"/>
+	<field name="weight_count" class="java.math.BigDecimal"/>
+	<field name="volume_count" class="java.math.BigDecimal"/>
+	<field name="fee_weight_count" class="java.math.BigDecimal"/>
+	<field name="cost_amount" class="java.math.BigDecimal"/>
+	<field name="pk_carrier" class="java.lang.String"/>
+	<field name="balatype" class="java.lang.Integer"/>
+	<field name="volume_weight_count" class="java.math.BigDecimal"/>
+	<field name="deli_method" class="java.lang.Integer"/>
+	<field name="tracking_status" class="java.lang.Integer"/>
+	<field name="tracking_memo" class="java.lang.String"/>
+	<field name="exp_flag" class="java.lang.String"/>
+	<field name="exp_type" class="java.lang.String"/>
+	<field name="tracking_time" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b03b5d4e-f67f-45ff-bd35-989c0ad6b176" x="214" y="22" width="125" height="35"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[发货单]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="383e13bd-f92f-4feb-9bef-21916a13b227" x="32" y="19" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[单据号]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="2dbca151-780a-421b-969f-17613cd115a0" x="0" y="0" width="555" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e92bdc4f-c92e-4b84-b78b-3c8ab5c29d18" x="74" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="10cd55fe-f409-4605-8685-d6cd0cce60e5" x="267" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="01d226d8-3397-468a-9620-d600ec06ce11" x="455" y="0" width="100" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="65b863b0-b6be-4c94-97ac-c5e2057260af" x="0" y="0" width="74" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[单据号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="970f86dc-78f5-418c-b373-d45ca3e1a1b8" x="74" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[客户]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="798d26bc-c4d7-464d-9aa7-e7e3442aa2d3" x="0" y="0" width="555" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="f328051a-1ea3-4854-9266-59718534a891" x="0" y="0" width="74" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{vbillno}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="35211149-a4c7-4787-aba7-118463e3c835" x="74" y="0" width="100" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="836ef96f-3662-40f0-a793-4883e8324fbb" x="74" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pk_customer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

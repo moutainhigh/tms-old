@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dataType: VARCHAR DATE DATETIME INT DOUBLE BOOLEAN -->
+<config>
+  <HEAD>
+      <param original="pk_corp" conversion="pk_corp" dataType="" length="" mandatory="N" defaultValue="0001" description="" />
+	  <param original="Code" conversion="cust_code" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="Name" conversion="cust_name" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="EnglishName" conversion="def3" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="Country" conversion="def2" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="Province" conversion="pk_province" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="City" conversion="pk_city" dataType="" length="" mandatory="N" defaultValue="" description="" />
+      <param original="Area" conversion="pk_area" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="Address" conversion="address" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="ServiceUserId" conversion="pk_psndoc" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="Id" conversion="def1" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  <param original="RecordStatus" conversion="dr" dataType="" length="" mandatory="N" defaultValue="" description="" />
+  </HEAD>
+</config>
+
+
+

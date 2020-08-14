@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+
+		<Resource auth="Container" name="jdbc/tms" type="javax.sql.DataSource"
+		url="jdbc:sqlserver://115.28.223.206:1433;databaseName=TMSTEST2;"
+		username="yj" password="yj0419" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+		maxActive="20" maxIdle="1" maxWait="10000" />
+		
+		<Resource auth="Container" name="jdbc/tms" type="javax.sql.DataSource"
+		url="jdbc:sqlserver://115.28.223.206:1433;databaseName=csdtms1227;"
+		username="yj" password="yj0419" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+		maxActive="20" maxIdle="1" maxWait="10000" />
+		
+		<!-- <Resource auth="Container" name="jdbc/tms" type="javax.sql.DataSource"
+		url="jdbc:sqlserver://222.73.42.92:1433;databaseName=RZTMS;"
+		username="sa" password="q123$%^" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+		maxActive="20" maxIdle="1" maxWait="10000" /> -->
+		
+		
+</Context>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dataType: VARCHAR DATE DATETIME INT DOUBLE BOOLEAN -->
+<config>
+  <HEAD>
+      <param original="Tenantid" conversion="pk_corp" dataType="VARCHAR" length="50" mandatory="N" defaultValue="0001" description="" />
+	  <param original="Code" conversion="code" dataType="VARCHAR" length="50" mandatory="N" defaultValue="" description="" />
+	  <param original="ChineseName" conversion="name" dataType="VARCHAR" length="50" mandatory="N" defaultValue="" description="" />
+	  <param original="tesdt" conversion="type" dataType="VARCHAR" length="50" mandatory="N" defaultValue="2" description="" />
+	  <param original="FeeType" conversion="def2" dataType="INT" length="50" mandatory="N" defaultValue="" description="" />
+  	  <param original="Remark" conversion="memo" dataType="" length="" mandatory="N" defaultValue="" description="" />
+  	  <param original="RecordStatus" conversion="dr" dataType="" length="" mandatory="N" defaultValue="" description="" />
+  </HEAD>
+</config>

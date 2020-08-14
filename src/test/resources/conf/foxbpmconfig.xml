@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxbpmconfig:FoxBPMConfig xmlns:foxbpmconfig="http://www.foxbpm.org/foxbpmconfig">
+	<plugins>
+		<plugin id="runningtrack" configurator="org.foxbpm.engine.impl.runningtrack.RunningTrackConfigurator" />
+		<plugin id="updateProcessInfo" configurator="org.foxbpm.plugin.processinfo.ProcessInfoConfigurator" />
+	</plugins>
+</foxbpmconfig:FoxBPMConfig>

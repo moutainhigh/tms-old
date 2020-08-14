@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dataType: VARCHAR DATE DATETIME INT DOUBLE BOOLEAN -->
+<config>
+  <HEAD>
+      <param original="pk_corp" conversion="pk_corp" dataType="VARCHAR" length="50" mandatory="N" defaultValue="0001" description="" />
+	  <param original="VendorId" conversion="pk_carrier" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="Id" conversion="def1" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="VehicleOwnerType" conversion="car_prop" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	   <param original="Code" conversion="pk_car_type" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="HeadstockLicensePlate" conversion="carno" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="DrivingLicenseNumber" conversion="driving_number" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />  
+	  <param original="Owner" conversion="legal_owner" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="ForcedBaoFeiQi" conversion="def2" dataType="VARCHAR" length="200" mandatory="" defaultValue="" description="" />
+      <param original="VehicleLong" conversion="outside_length" dataType="DOUBLE" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="VehicleWidth" conversion="outside_width" dataType="DOUBLE" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="VehicleHeight" conversion="outside_height" dataType="DOUBLE" length="200" mandatory="" defaultValue="" description="" />
+	  <param original="InnerDiameterLong" conversion="length" dataType="DOUBLE" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="InnerDiameterWidth" conversion="width" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+	  <param original="InnerDiameterHeight" conversion="height" dataType="DOUBLE" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="PayloadKg" conversion="load_weight" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="AnnualVerificationDate" conversion="annual_date" dataType="DATETIME" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="PayloadTon" conversion="tonnage" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="TruckLicensePlate" conversion="trailer" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="IsGps" conversion="if_gps" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="GpsCode" conversion="gps_id" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="GpsLevel" conversion="gps_lev" dataType="VARCHAR" length="200" mandatory="" defaultValue="" description="" />
+	  <param original="NormalUserName" conversion="pk_driver" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="EngineNo" conversion="engine_no" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+	  <param original="VehicleIdentificationNo" conversion="frame_no" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="IsSupervise" conversion="Supervision_type" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="WhiteCardNumber" conversion="def3" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="IsDanger" conversion="dangerous_veh" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="HeightWithOutDoorFrame" conversion="def5" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="BrandType" conversion="def6" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+      <param original="VehicleKind" conversion="def7" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="VehicleTypeCode" conversion="pk_car_type" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="RecordStatus" conversion="dr" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  </HEAD>
+</config>

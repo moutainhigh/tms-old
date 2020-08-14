@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dataType: VARCHAR DATE DATETIME INT DOUBLE BOOLEAN -->
+<config>
+  <HEAD>
+      <param original="pk_corp" conversion="pk_corp" dataType="VARCHAR" length="50" mandatory="N" defaultValue="0001" description="" />
+      <param original="Name" conversion="driver_name" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+      <param original="VendorId" conversion="pk_carrier" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="Contact" conversion="mobile" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="Age" conversion="age" dataType="VARCHAR" length="200" mandatory="" defaultValue="" description="" />
+	  <param original="DrivingLicenseType" conversion="lic_type" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="DrivingLicenseNumber" conversion="driver_lic" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="DrivingLicenseVerificationDate" conversion="lic_approve_time" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="IdCord" conversion="driver_lic" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="QualificationCode" conversion="def5" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="QualificationAnnualVerificationDate" conversion="def6" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="IsSpecialId" conversion="def2" dataType="VARCHAR" length="200" mandatory="" defaultValue="" description="" />
+	  <param original="SpecialIdType" conversion="def3" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="SpecialIdNo" conversion="def4" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+  	  <param original="Residence" conversion="addr" dataType="VARCHAR" length="200" mandatory="" defaultValue="" description="" />
+	  <param original="OutFlown" conversion="def7" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="Id" conversion="def1" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	   <param original="RecordStatus" conversion="dr" dataType="" length="" mandatory="N" defaultValue="" description="" />
+	  </HEAD>
+</config>

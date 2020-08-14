@@ -1,0 +1,58 @@
+; 2001-06-18 -- DynAPI core dist window expando properties ----
+; (This list may not be 100% accurate, please fill in the blanks...)
+; Usage :
+;  Rename this file to "bless.map" and put it in the same directory
+;  as ESC.wsf to keep these members from getting name-mangled by
+;  the substitution engine.
+
+Clone
+ColorPicker
+CoreSkinButton
+CoreSkinWindow
+CoreSkinwindowaddChild
+Count
+DragDrop
+DragEvent
+DynAPI
+DynAPIObject 
+DynDocument
+DynEvent
+DynImage
+DynKeyEvent
+DynLayer
+DynMouseEvent
+DynObject
+EventListener
+EventMethod
+EventMethodS
+FileCabinet
+FileIO
+HoverAnimation
+IbsParallax
+ImageAnimation
+imageCollapse
+ImgButton
+Label
+Layout
+List
+ListItem
+Litelist
+LoadPanel
+LoadQueue
+MyMouseEvent
+OpacityAnimation
+Panel
+Pathanim
+PathAnimation
+PopUp
+ProgressBar
+PullDownParams
+PushPanel
+RadioDial
+RiFastSkinTreenode
+ScrollBar
+ScrollPane
+SineWave
+Slider
+Sprite
+Thread

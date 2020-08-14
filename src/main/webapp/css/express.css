@@ -1,0 +1,313 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li,
+	pre, form, fieldset, legend, button, input, textarea, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+body, button, input, select, textarea {
+	color: #666666;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+
+em {
+	font-style: normal;
+}
+
+code, kbd, pre, samp {
+	font-family: courier new, courier, monospace;
+}
+
+small {
+	font-size: 12px;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+a:link, a:visited {
+	color: #434343;
+	text-decoration: none;
+}
+
+.org {
+	color: #CE2504;
+}
+
+.green {
+	color: #006600;
+	font-weight: bold;
+}
+
+a.org:link, a.org:visited {
+	color: #CE2504;
+}
+
+a:hover, a:active, a.org:hover, a.org:active {
+	color: #ff4e00;
+	text-decoration: underline;
+}
+
+.gray {
+	color: #989898;
+	font-weight: normal;
+}
+
+a.gray:link, a.gray:visited {
+	color: #989898;
+}
+
+.txr {
+	text-align: right;
+}
+
+fieldset, img {
+	border: 0;
+	vertical-align: middle;
+}
+
+button, input, select, textarea {
+	font-size: 100%;
+	vertical-align: middle;
+}
+
+.r {
+	color: #DC291E;
+}
+
+.b {
+	color: #0079B1;
+}
+
+.g {
+	color: #40900A;
+}
+
+.clear:after{
+    visibility:hidden;
+    display:block;
+    font-size:0;
+	content:" ";
+    clear:both;
+    height:0;
+}
+.clear{
+    display:inline-block;
+}
+.wrapper {
+	position: relative;
+	z-index: 1;
+	min-width: 1000px;
+	max-width: 1440px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.logo {
+	position: absolute;
+	top: 10px;
+	left: 30%;
+	z-index: 100;
+	margin-left: -360px;
+}
+
+.ic-mod-banner {
+	background: #fff;
+	height: 600px;
+	position: relative;
+}
+
+.ic-mod-banner .banners {
+	width: 1440px;
+	height: 600px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -720px;
+}
+
+.ic-mod-banner .banner {
+	width: 1440px;
+	height: 600px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -720px;
+}
+
+.ic-mod-banner .banner img {
+	width: 100%;
+	height: 100%;
+}
+
+.ic-mod-banner .focus {
+	width: 720px;
+	text-align: center;
+	margin-left: -360px;
+	position: absolute;
+	left: 50%;
+	bottom: 5px;
+}
+
+.ic-mod-banner .focus a {
+	text-decoration: none;
+	z-index: 3;
+	width: 24px;
+	height: 44px;
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	overflow: hidden;
+	margin: 0px 3px;
+	zoom: 1;
+}
+
+.ic-mod-banner .focus a .bg-m {
+	z-index: 4;
+	color: white;
+	line-height: 40px;
+	font-size: 40px;
+	position: absolute;
+	display: block;
+	left: 2px;
+	top: 6px;
+	cursor: pointer;
+	display: none;
+}
+
+.ic-mod-banner .focus a .bg-b {
+	background-image: url(../images/i_dot.png);
+	position: absolute;
+	display: block;
+	left: 0px;
+	top: 0px;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+}
+
+.ic-mod-banner .focus a .inner {
+	background-image: url(../images/i_dot_hover.png);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 9;
+	opacity: 0;
+	display: none\0; 
+	display: none;
+	*display: none;
+	width: 18px;
+	height: 18px;
+}
+
+.ic-mod-banner .focus a.on .inner, .ic-mod-banner .focus a:hover .inner
+	{
+	cursor: pointer;
+	display: block;
+	border: 0;
+	-webkit-transition: opacity .3s ease-in-out;
+	-ms-transition: opacity .3s ease-in-out;
+	transition: opacity .3s ease-in-out;
+	opacity: 1;
+}
+
+.ic-mod-banner .focus .hover .inner {
+	display: block;
+}
+
+.express {
+	position: absolute;
+	top: 100px;
+	right: 30%;
+	z-index: 9;
+	width: 600px;
+	height: 400px;
+	background: url(../images/express_from.png) 0 0 no-repeat;
+}
+
+.express_content {
+	padding: 10px 35px 0;
+}
+
+.express_msg {
+	position: absolute;
+	margin-top : 50px;
+	padding: 10px 35px 0;
+	width: 520px;
+	height: 280px;
+	overflow-x : visible;
+	overflow-y : auto;  
+}
+
+.express_msg li {
+	padding: 1px 0;
+	font-size: 12px;
+	
+}
+.express_content h2 {
+	padding: 10px 8px 0 0;
+	font-size: 14px;
+	height: 25px;
+	font-weight: bold;
+}
+
+.express_content ul {
+	padding-top: 10px;
+}
+
+.express_content li {
+	padding: 8px 0;
+	float:left;
+}
+
+.express_content li label {
+	display: block;
+	margin: 0 0 5px;
+}
+
+.express_content input {
+	width: 300px;
+	height: 31px;
+	font-weight: bold;
+	line-height: 31px;
+	padding-left: 4px;
+	margin-top: 6px;
+	background: url(../images/inputbg.png) repeat-x;
+	border: #b4ccb8 solid 1px;
+	border-radius: 3px;
+	color: #AEAEAE
+}
+
+.express_content input.focus {
+	border: #61c573 solid 1px;
+	background: url(../images/input-focusbg.png) repeat-x;
+	color: #333
+}
+
+.express_btn {
+	border: none;
+	background: url(../images/express_btn.png) 0 0 no-repeat;
+	width: 86px;
+	height: 33px;
+	text-indent: -9999px;
+	cursor: pointer;
+	margin-right: 100px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.express_content li a {
+	color: #999;
+}
+
+.express_content li a:hover {
+	color: #f60;
+}
+.tips_icon{
+	background: url(../images/tips-icon.png) 0 0 no-repeat;
+}

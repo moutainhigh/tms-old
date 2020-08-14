@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:aop="http://www.springframework.org/schema/aop" 
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xmlns:mvc="http://www.springframework.org/schema/mvc" 
+		xmlns:jee="http://www.springframework.org/schema/jee"
+
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+         http://www.springframework.org/schema/tx 
+         http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+         http://www.springframework.org/schema/jee 
+         http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+	<!-- 配置文件加载 
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:/conf/jdbc.properties" />
+	</bean>-->
+	
+	<bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+	  <property name="supportedMediaTypes" value="application/json" />
+	</bean>
+	<!-- foxbpm数据源 -->
+	
+	<bean id="foxbpmDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${dataSource.driverClass}" />
+		<property name="url" value="${dataSource.url}" />
+		<property name="username" value="${dataSource.username}" />
+		<property name="password" value="${dataSource.password}" />
+	</bean>
+<!-- 	<jee:jndi-lookup id="foxbpmDataSource" jndi-name="${dataSource.jndi}"/> -->
+	
+	<!-- 使用jdbcTemplate -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref local="foxbpmDataSource" />
+		</property>
+	</bean>
+	
+	<!-- Jpa Entity Manager 配置 -->
+    
+     <!-- Jpa Entity Manager 配置 -->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="foxbpmDataSource"/>
+        <property name="jpaVendorAdapter" ref="eclipselinkJpaVendorAdapter"/>
+        <property name="packagesToScan" value="org.foxbpm.portal"/>
+        <property name="jpaProperties">
+            <props>
+            	<prop key="eclipselink.weaving">false</prop>
+                <prop key="eclipselink.show_sql">true</prop>
+                <prop key="eclipselink.logging.parameters">true</prop>
+                <prop key="eclipselink.logging.level">FINE</prop>
+                <prop key="eclipselink.logging.level.sql">FINE</prop>
+                <prop key="eclipselink.orm.throw.exceptions">true</prop>
+                <prop key="eclipselink.cache.shared.default">false</prop>
+            </props>
+        </property>
+    </bean>
+    
+	<bean id="eclipselinkJpaVendorAdapter" class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter"/>
+
+    <!-- Jpa 事务配置 -->
+    <!--
+    <bean id="foxbpmTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>-->
+    
+	<bean id="scheduler"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="autoStartup" value="false"></property>
+		<!-- 注入数据源 -->
+		<property name="dataSource">
+			<ref bean="foxbpmDataSource" />
+		</property>
+		<property name="transactionManager" ref="transactionManager">
+		</property>
+		<!-- 延迟30秒启动Scheduler -->
+		<property name="startupDelay" value="5"></property>
+		<!-- 通过applicationContextSchedulerContextKey属性配置spring上下文 -->
+		<property name="applicationContextSchedulerContextKey">
+			<value>applicationContext</value>
+		</property>
+	</bean>
+	<bean id="foxbpmScheduler" class="org.foxbpm.engine.impl.schedule.FoxbpmScheduler">
+		<constructor-arg>
+			<ref bean="scheduler" />
+		</constructor-arg>
+	</bean>
+	
+	<bean id="springLoadHelper" class="org.foxbpm.rest.common.api.SpringLoadHelper" />
+
+	<!-- 流程引擎配置 -->
+	<bean id="userDefinition" class="org.foxbpm.engine.impl.identity.UserDefinitionImpl" />
+	<bean id="processEngineConfigurationSpring"
+		class="org.foxbpm.engine.spring.ProcessEngineConfigurationSpring">
+		<property name="dataSource" ref="foxbpmDataSource" />
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="foxbpmScheduler" ref="foxbpmScheduler"/>
+		<property name="connectorMenuPath" value="conf/CustomConnectorMenu.xml" />
+		<property name="configXmlPath" value="conf/foxbpmconfig.xml"/>
+		<property name="userDefinition" ref="userDefinition"/>
+		<property name="groupDefinitions">
+			<list>
+				<bean class="org.foxbpm.engine.impl.identity.GroupDeptImpl" >
+					<constructor-arg index="0"><value>dept</value></constructor-arg>
+					<constructor-arg index="1"><value>部门</value></constructor-arg>
+				</bean>
+				<bean class="org.foxbpm.engine.impl.identity.GroupRoleImpl" >
+					<constructor-arg index="0"><value>role</value></constructor-arg>
+					<constructor-arg index="1"><value>角色</value></constructor-arg>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	
+
+	<!-- 流程引擎 -->
+	<bean id="processEngine" class="org.foxbpm.engine.spring.ProcessEngineFactoryBean">
+		<property name="processEngineConfiguration" ref="processEngineConfigurationSpring" />
+	</bean>
+
+	<!-- 任务服务 -->
+	<bean id="taskService" factory-bean="processEngine"
+		factory-method="getTaskService" />
+	<!-- 模型服务 -->
+	<bean id="modelService" factory-bean="processEngine"
+		factory-method="getModelService" />
+	<!-- 运行时服务 -->
+	<bean id="runtimeService" factory-bean="processEngine"
+		factory-method="getRuntimeService" />
+	<!-- 运行时服务 -->
+	<bean id="identityService" factory-bean="processEngine"
+		factory-method="getIdentityService" />
+
+	<bean id="abstrJdbcTemplate" abstract="true">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<!-- 事务通知 -->
+	<!--
+	<tx:advice id="foxbpmTransactionAdvice" transaction-manager="foxbpmTransactionManager">
+		<tx:attributes>
+			<tx:method name="apply*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>-->
+	
+	<!--<bean id="foxbpmUserInterceptor" class="org.foxbpm.portal.interceptor.FoxbpmUserInterceptor" />-->
+	<!-- aop配置 -->
+	<!--
+	<aop:config>
+		<aop:pointcut id="txPointcut"
+			expression="execution(* org.foxbpm.portal.service..*.*(..))" />
+		<aop:pointcut id="userPointcut"
+			expression="execution(* org.foxbpm.engine.TaskService.*(..))" />
+		<aop:advisor advice-ref="foxbpmTransactionAdvice"
+			pointcut-ref="txPointcut" />
+		<aop:advisor advice-ref="foxbpmUserInterceptor"
+			pointcut-ref="userPointcut" />
+	</aop:config>-->
+</beans> 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dataType: VARCHAR DATE DATETIME INT DOUBLE BOOLEAN -->
+<config>
+  <HEAD>
+      <param original="TenantId" conversion="corp_code" dataType="VARCHAR" length="50" mandatory="Y" defaultValue="" description="" />
+	  <param original="ParentId" conversion="fathercorp" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="TenantName" conversion="corp_name" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+	  <param original="ID" conversion="def1" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+  </HEAD>
+</config>
+
+
+

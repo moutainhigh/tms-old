@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dataType: VARCHAR DATE DATETIME INT DOUBLE BOOLEAN -->
+<config>
+  <HEAD>
+      <param original="code" conversion="code" dataType="VARCHAR" length="50" mandatory="Y" defaultValue="" description="" />
+	  <param original="name" conversion="name" dataType="VARCHAR" length="50" mandatory="Y" defaultValue="" description="" />
+	  <param original="contractno" conversion="contractno" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+	  <param original="contract_type" conversion="contract_type" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+	  <param original="bala_customer" conversion="bala_customer" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+	  <param original="pk_carrier" conversion="pk_carrier" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+	  <param original="trans_type" conversion="trans_type" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+	  <param original="currency" conversion="currency" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+	  <param original="effective_date" conversion="" dataType="DATETIME" length="" mandatory="" defaultValue="" description="" />
+	  <param original="invalid_date" conversion="" dataType="DATETIME" length="" mandatory="" defaultValue="" description="" />
+	  <param original="pk_corp" conversion="pk_corp" dataType="VARCHAR" length="" mandatory="Y" defaultValue="" description="" />
+	  <param original="memo" conversion="memo" dataType="VARCHAR" length="50" mandatory="" defaultValue="" description="" />
+  </HEAD>
+    <contract_b>
+    
+ 	  <param original="start_addr_type" conversion="start_addr_type" dataType="INT" length="" mandatory="" defaultValue="" description="" />
+      <param original="start_addr" conversion="start_addr" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="end_addr_type" conversion="length" dataType="INT" length="" mandatory="" defaultValue="" description="" />
+      <param original="end_addr" conversion="end_addr_type" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="pk_expense_type" conversion="pk_expense_type" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="quote_type" conversion="quote_type" dataType="INT" length="" mandatory="" defaultValue="" description="" />
+      <param original="price_type" conversion="price_type" dataType="INT" length="" mandatory="" defaultValue="" description="" />
+      <param original="valuation_type" conversion="valuation_type" dataType="INT" length="" mandatory="" defaultValue="" description="" />
+      <param original="lowest_fee" conversion="lowest_fee" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="first_weight" conversion="first_weight" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="first_weight_price" conversion="first_weight_price" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="if_return" conversion="if_return" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="urgent_level" conversion="urgent_level" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="item_code" conversion="item_code" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="pk_trans_line" conversion="pk_trans_line" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" /> 
+      <param original="tax_cat" conversion="tax_cat" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />     
+      <param original="tax_rate" conversion="tax_rate" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval1" conversion="interval1" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price1" conversion="price1" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval2" conversion="interval2" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price2" conversion="price2" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval3" conversion="interval3" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />      
+      <param original="price3" conversion="price3" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval4" conversion="interval4" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price4" conversion="price4" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interva5" conversion="interva5" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price5" conversion="price5" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval6" conversion="interval6" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />      
+      <param original="price6" conversion="price6" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval7" conversion="interval7" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price7" conversion="price7" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />      
+      <param original="interval8" conversion="interval8" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price8" conversion="price8" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval9" conversion="interval9" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price9" conversion="price9" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval10" conversion="interval10" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price10" conversion="price10" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />      
+      <param original="interval11" conversion="interval11" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="price11" conversion="price11" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="interval12" conversion="interval12" dataType="DOUBLE" length="" mandatory="" defaultValue="" description="" />
+      <param original="memo" conversion="memo" dataType="VARCHAR" length="" mandatory="" defaultValue="" description="" />
+      <param original="if_optional" conversion="if_optional" dataType="CHAR" length="" mandatory="" defaultValue="" description="" />
+  </contract_b>
+</config>

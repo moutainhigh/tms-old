@@ -1,0 +1,107 @@
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+	xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper" />
+	<!-- 系统服务 -->
+	<service name="AdminService" provider="java:MSG">
+		<parameter name="allowedMethods" value="AdminService" />
+		<parameter name="enableRemoteAdmin" value="false" />
+		<parameter name="className" value="org.apache.axis.utils.Admin" />
+		<namespace>http://xml.apache.org/axis/wsdd/</namespace>
+	</service>
+	<service name="Version" provider="java:RPC">
+		<parameter name="allowedMethods" value="getVersion" />
+		<parameter name="className" value="org.apache.axis.Version" />
+	</service>
+	<!-- 货物跟踪服务 -->
+	<service name="trackingServices" provider="java:RPC">
+		<parameter name="className"
+			value="com.tms.services.peripheral.TrackingServiceEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 货物签收服务 -->
+	<service name="pickingServices" provider="java:RPC">
+		<parameter name="className"
+			value="com.tms.services.peripheral.PickingServiceEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 签收回单服务 -->
+	<service name="fileServices" provider="java:RPC">
+		<parameter name="className"
+			value="com.tms.services.peripheral.FileServiceEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 到货服务 -->
+	<service name="arrivalServices" provider="java:RPC">
+		<parameter name="className"
+			value="com.tms.services.peripheral.ArrivalServiceEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 确认服务 -->
+	<service name="confirmServices" provider="java:RPC">
+		<parameter name="className"
+			value="com.tms.services.peripheral.ConfirmServiceEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	
+	<!-- 前往节点 -->
+	<service name="saveTransServices" provider="java:RPC">
+		<parameter name="className"
+			value="com.tms.services.peripheral.SaveTransServiceEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 加油管理 -->
+	<service name="refuelingAndTollServices" provider="java:RPC">
+		<parameter name="className"
+			value="com.tms.services.peripheral.RefuelingAndTollServiceEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+
+	<!-- tmsapiEndPoint 对外服务 -->
+	<service name="TmsPublicServices" provider="java:RPC">
+		<parameter name="className" value="com.tms.services.tmsapi.TmsApiEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	
+	<!-- 标准订单接口 -->
+	<service name="TmsStandardOrderServices" provider="java:RPC">
+		<parameter name="className" value="com.tms.services.tmsStandardApi.ImportOrdersEndpoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	
+	<!-- 佳达订单接口 -->
+	<service name="TmsJDOrderServices" provider="java:RPC">
+		<parameter name="className" value="com.tms.services.tmsStandardApi.ImportOrdersEndpointByID" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 佳达报价接口 -->
+	<service name="TmsJDQuotationServices" provider="java:RPC">
+		<parameter name="className" value="com.tms.services.jdQuotation.JDQuotationEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 佳达协查接口 -->
+	<service name="TmsJDInspectionServices" provider="java:RPC">
+		<parameter name="className" value="com.tms.services.inspection.InspectionEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 基础资料接口 -->
+	<service name="TmsStandardBasicDatasServices" provider="java:RPC">
+		<parameter name="className" value="com.tms.services.tmsStandardApi.ImportBasicDatasEndpoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!-- 标准合同导入接口  -->
+	<service name="TmsStandardContractServices" provider="java:RPC">
+		<parameter name="className" value="com.tms.services.tmsStandardApi.ImportContractEndpoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<!--LBS围栏信息服务 -->
+	<service name="fenceRecordServices" provider="java:RPC">
+		<parameter name="className"
+			value="com.tms.services.lbsApi.FenceRecordServiceEndPoint" />
+		<parameter name="allowedMethods" value="*" />
+	</service>
+	<transport name="http">
+		<requestFlow>
+			<handler type="URLMapper" />
+		</requestFlow>
+	</transport>
+</deployment>

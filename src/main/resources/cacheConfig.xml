@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache-factory clean-interval="30s">
+	<cache id="defaultCache" desc="Default Cache" ttl="5m" idle="5m"
+		max-size="2000" reference="soft" />
+
+<!-- 	<cache id="currency" desc="currency" /> -->
+
+<!-- 	<cache id="account" desc="account" max-size="1000" /> -->
+
+</cache-factory>

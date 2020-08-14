@@ -1,0 +1,128 @@
+ESC> Parsed map "core", 74 entries.
+ESC> Parsed map "common", 234 entries.
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\Array.js"
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\Date.js"
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\Math.js"
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\Number.js"
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\Object.js"
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\String.js"
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\Array\LessCommon.js"
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\Date\CustomString.js"
+ESC> Loading script "F:\soya\_apps\esc\ESC-1.03\ECMA\String\HTMLEncode.js"
+ESC> Removing comments, empty lines and trailing whitespace, saved 5594 bytes.
+ESC> Removing tabs and spaces, saved 839 bytes.
+ESC> Removing spaces left to operators, saved 662 bytes.
+ESC> Removing spaces right to operators, saved 619 bytes.
+ESC> Substituting [$a] -> [$Soya_ECMA_Array_push]
+ESC> Substituting [$b] -> [$Soya_ECMA_Array_pop]
+ESC> Substituting [$z] -> [$Soya_ECMA_Array_shift]
+ESC> Substituting [$d] -> [$Soya_ECMA_Array_unshift]
+ESC> Substituting [$e] -> [$Soya_ECMA_Array_splice]
+ESC> Substituting [$f] -> [$Soya_ECMA_Array_indexOf]
+ESC> Substituting [$g] -> [$Soya_ECMA_Array_remove]
+ESC> Substituting [$h] -> [$Soya_ECMA_Date_getDaysInMonth]
+ESC> Substituting [$i] -> [$Soya_ECMA_Date_isLeapYear]
+ESC> Substituting [$j] -> [$Soya_ECMA_Date_skew]
+ESC> Substituting [$k] -> [$Soya_ECMA_Math_random2]
+ESC> Substituting [$l] -> [$Soya_ECMA_Number_isEven]
+ESC> Substituting [$m] -> [$Soya_ECMA_Number_isOdd]
+ESC> Substituting [$n] -> [$Soya_ECMA_Number_toFixed]
+ESC> Substituting [$o] -> [$Soya_ECMA_Object_hasOwnProperty]
+ESC> Substituting [$p] -> [$Soya_ECMA_Object_isPrototypeOf]
+ESC> Substituting [$q] -> [$Soya_ECMA_String_concat]
+ESC> Substituting [$r] -> [$Soya_ECMA_String_capitalize]
+ESC> Substituting [$s] -> [$Soya_ECMA_String_chopLeft]
+ESC> Substituting [$t] -> [$Soya_ECMA_String_chopRight]
+ESC> Substituting [$u] -> [$Soya_ECMA_String_count]
+ESC> Substituting [$v] -> [$Soya_ECMA_String_invertCase]
+ESC> Substituting [$w] -> [$Soya_ECMA_String_reverse]
+ESC> Substituting [$x] -> [$Soya_ECMA_String_rotate]
+ESC> Substituting [$y] -> [$Soya_ECMA_String_trim]
+ESC> Substituting [$z] -> [$Soya_ECMA_String_trimLeft]
+ESC> Substituting [$A] -> [$Soya_ECMA_String_trimRight]
+ESC> Substituting [$B] -> [$Soya_ECMA_String_wrap]
+ESC> Substituting [$Z] -> [$Soya_ECMA_Array_LessCommon_fill]
+ESC> Substituting [$D] -> [$Soya_ECMA_Array_LessCommon_flatten]
+ESC> Substituting [$E] -> [$Soya_ECMA_Array_LessCommon_foreach]
+ESC> Substituting [$F] -> [$Soya_ECMA_Array_LessCommon_rotate]
+ESC> Substituting [$G] -> [$Soya_ECMA_Date_toCustomString]
+ESC> Substituting [$H] -> [$Soya_ECMA_String_HTMLEncode]
+ESC> Substituting [$I] -> [vSlot]
+ESC> Substituting [$J] -> [nLen]
+ESC> Substituting [$K] -> [vLast]
+ESC> Substituting [$L] -> [vFirst]
+ESC> Substituting [$M] -> [nPos]
+ESC> Substituting [$N] -> [nCnt]
+ESC> Substituting [$O] -> [aRem]
+ESC> Substituting [$P] -> [aKeep]
+ESC> Substituting [$Q] -> [vDunno]
+ESC> Substituting [$R] -> [nIndex]
+ESC> Substituting [$S] -> [nOffset]
+ESC> Substituting [$T] -> [nYear]
+ESC> Substituting [$U] -> [sSkew]
+ESC> Substituting [$V] -> [bAhead]
+ESC> Substituting [$W] -> [nRset]
+ESC> Substituting [$X] -> [nType]
+ESC> Substituting [$Y] -> [sRnd]
+ESC> Substituting [$Z] -> [sFixed]
+ESC> Substituting [$00] -> [sProperty]
+ESC> Substituting [$01] -> [bResult]
+ESC> Substituting [$02] -> [oConst]
+ESC> Substituting [$03] -> [oAny]
+ESC> Substituting [$04] -> [nArgs]
+ESC> Substituting [$05] -> [sOut]
+ESC> Substituting [$06] -> [nlPos]
+ESC> Substituting [$07] -> [aWords]
+ESC> Substituting [$08] -> [nwPos]
+ESC> Substituting [$09] -> [nwlPos]
+ESC> Substituting [$0a] -> [nDegree]
+ESC> Substituting [$0b] -> [nMod]
+ESC> Substituting [$0z] -> [nSpos]
+ESC> Substituting [$0d] -> [rChunk]
+ESC> Substituting [$0e] -> [aLines]
+ESC> Substituting [$0f] -> [nLength]
+ESC> Substituting [$0g] -> [vData]
+ESC> Substituting [$0h] -> [fData]
+ESC> Substituting [$0i] -> [nBeg]
+ESC> Substituting [$0j] -> [aOut]
+ESC> Substituting [$0k] -> [fCall]
+ESC> Substituting [$0l] -> [$Soya_ECMA_Array_foreach]
+ESC> Substituting [$0m] -> [aPos]
+ESC> Substituting [$0n] -> [aNeg]
+ESC> Substituting [$0o] -> [sCStr]
+ESC> Substituting [$0p] -> [oDate]
+ESC> Substituting [$0q] -> [nCharPos]
+ESC> Substituting [$0r] -> [nLastCharPos]
+ESC> Substituting [$0s] -> [sEncoded]
+ESC> Substituting [$0t] -> [rEntity]
+ESC> Substituting [$0u] -> [aEntities]
+ESC> Substitution summary, saved 2930 bytes.
+ESC> Removing newlines, saved 989 bytes.
+
+
+ESC (ECMAScript Cruncher) 1.03
+Copyright (C) 2001, Thomas Loo - Saltstorm <esc@saltstorm.net>
+-----------------------------------------------------------------------------
+ Crunching script(s):
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\Array.js (5.20 KB)
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\Date.js (1.64 KB)
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\Math.js (0.50 KB)
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\Number.js (1.02 KB)
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\Object.js (1.54 KB)
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\String.js (4.73 KB)
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\Array\LessCommon.js (3.74 KB)
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\Date\CustomString.js (3.83 KB)
+	 * F:\soya\_apps\esc\ESC-1.03\ECMA\String\HTMLEncode.js (1.00 KB)
+-----------------------------------------------------------------------------
+ Writing to : F:\soya\_apps\esc\ESC-1.03\ecma.js (11.84 KB)
+-----------------------------------------------------------------------------
+ Processtime     :	0.311 secs
+ Crunch-level    :	4
+ Subst. engine   :	On
+ Substitutions   :	83
+ Original size   :	23.21 KB
+ Crunched size   :	11.84 KB
+ Saving ratio    :	11.36 KB
+   -'' ''-   (%) :	48.96 %
+-----------------------------------------------------------------------------
+
